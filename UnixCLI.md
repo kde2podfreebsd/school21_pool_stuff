@@ -1,4 +1,4 @@
-# *Unix comand line interface
+# *nix comand line interface
 ![enter image description here](https://habrastorage.org/r/w1560/getpro/habr/upload_files/888/cc1/234/888cc1234f2dcb94071a73cd7426c2fd.png)
 
 #### По факту этот .md - это конспект курса https://ru.hexlet.io/courses/cli-basics - приоритеней пройти его.
