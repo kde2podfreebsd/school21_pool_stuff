@@ -1,0 +1,1 @@
+gcc -std=c11 -Wall -Werror -Wextra file.c -o build/file -lm
