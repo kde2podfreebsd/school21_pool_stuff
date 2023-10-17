@@ -1,41 +1,24 @@
 #include <stdio.h>
 
-#define IS_INT(x) (x == (int)x)
+#define OK 0
+#define ERR 1
 
-int sum(int a, int b){
-    int sum = a + b;
-    int diff = a - b;
-    int com = a * b;
-    // float del;
-    int del;
-    if(b==0){
-        printf("%d %d %d n/a", sum, diff, com);
+void calculate(int num1, int num2);
+
+int main() {
+    int num1, num2;
+    char garbage;
+    int status = OK;
+    if(scanf("%d %d%c", &num1, &num2, &garbage) == 3 && garbage == '\n'){
+        calculate(num1, num2);
     } else {
-        del = a / b;
-        printf("%d %d %d %d", sum, diff, com, del);
+        status = ERR;
+        printf("n/a");
     }
-    return 0;
+
+    return status;
 }
 
-int main(){
-    int a, b;
-
-    if(scanf("%d %d", &a, &b) != 2) {
-        printf("n/a");
-        return 1;
-    }
-
-    // if(!(IS_INT(a) && IS_INT(b))){
-    //     printf("n/a");
-    //     return 1;
-    // }
-    //??? зачем это есть в решении? 
-    // char c = ' ';
-    // if ((scanf("%c", &c) != 0) && (c != '\n')) {
-    //     printf("n/a");
-    //     return 1;
-    // }
-
-    sum(a, b);
-    return 0;
+void calculate(int num1, int num2){
+    (num2==0) ? printf("%d %d %d n/a", num1 + num2, num1 - num2, num1 * num2) : printf("%d %d %d %d", num1 + num2, num1 - num2, num1 * num2, num1/num2);
 }

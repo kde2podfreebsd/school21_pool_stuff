@@ -1,18 +1,25 @@
 #include <stdio.h>
 
+#define OK 0
+#define ERR 1
+
+void is_in_circle(double x, double y);
+
 int main(){
-    float x, y;
-
-    if(scanf("%f %f", &x, &y) != 2){
+    double x, y;
+    int status = OK;
+    char garbage;
+    
+    if(scanf("%lf %lf%c", &x, &y, &garbage) == 3 && garbage == '\n'){
+        is_in_circle(x, y);
+    } else {
+        status = ERR;
         printf("n/a");
-        return 1;
     }
 
-    if(x*x + y*y < 25){
-        printf("GOTCHA");
-    } else{
-        printf("MISS");
-    }
+    return status;
+}
 
-    return 0;
+void is_in_circle(double x, double y){
+    (x*x + y*y < 25) ? printf("GOTCHA") : printf("MISS");
 }
