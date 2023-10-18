@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #define NMAX 10
 
 int input(int *a, int *n);
@@ -20,6 +21,8 @@ int main()
 
 int input(int *a, int *n){
     char garbage;
+    int status = OK;
+    
     if(scanf("%d%c", n, &garbage) == 2 && garbage == '\n'){
         if((*n > NMAX) || (*n <= 0)){
             return 1;

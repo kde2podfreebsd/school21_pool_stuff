@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+#define my_abs(x) ((x >=0) ? x : -x)
 
 int is_prime(int num);
 void find_max_primary_div(int inpunt_value);
@@ -11,7 +12,7 @@ int main(){
         printf("n/a");
         return 1;
     }
-    num = abs(num);
+    num = my_abs(num);
     find_max_primary_div(num);
     return 0;
 }
