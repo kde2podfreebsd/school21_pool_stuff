@@ -65,11 +65,9 @@ int is_3sigma_rule(int *array, int n, int x){
     double lowerLimit = mean_value - 3 * std_dev;
     double upperLimit = mean_value + 3 * std_dev;
 
-    if (x >= lowerLimit && x <= upperLimit) {
-        return 1;
-    } else {
-        return 0;
-    }
+    int output = (x >= lowerLimit && x <= upperLimit) ? 1 : 0;
+
+    return output
 }
 
 int search(int *array, int n){
