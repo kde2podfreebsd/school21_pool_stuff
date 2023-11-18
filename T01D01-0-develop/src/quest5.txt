@@ -1,0 +1,3 @@
+touch quest5.txt
+nano door_management_files/door_configuration/door_1.conf
+3

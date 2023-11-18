@@ -1,0 +1,13 @@
+"""
+N
+X1 Y1
+X2 Y2
+
+...
+
+XN YN
+"""
+
+Stdin
+'N' - Number of preset alive points;
+'XN YN' - Following each row contains X, Y xoordinates of each alive point from 1 to N.
