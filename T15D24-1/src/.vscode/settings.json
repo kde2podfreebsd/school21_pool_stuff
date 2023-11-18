@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "__locale": "c",
+        "locale": "c",
+        "thread": "c",
+        "modules.h": "c",
+        "initdatabase.h": "c",
+        "shared.h": "c"
+    }
+}
